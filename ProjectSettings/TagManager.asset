@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Wall
+  - Obstacle
+  - PortalA
+  - Portal B
+  - Portal
+  - PortalB
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Wall
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 147995681
+    locked: 0
+  - name: Checkpoint
+    uniqueID: 3015108059
+    locked: 0
+  - name: MovingPlatform
+    uniqueID: 3370942737
+    locked: 0
+  - name: Particles
+    uniqueID: 3296883117
+    locked: 0
+  - name: Obstacls
+    uniqueID: 220594051
+    locked: 0
+  - name: Wall
+    uniqueID: 2615574729
+    locked: 0
+  - name: Interface
+    uniqueID: 1492887019
+    locked: 0
+  - name: Player
+    uniqueID: 2651541153
+    locked: 0
+  m_RenderingLayers:
+  - Default
