@@ -9,8 +9,6 @@ public class ParticleController : MonoBehaviour
     [SerializeField] private ParticleSystem MovementParticles;
     [SerializeField] private ParticleSystem FallParticles;
     [SerializeField] private ParticleSystem TouchParticles;
-    [SerializeField] private ParticleSystem portalAParticles;
-    [SerializeField] private ParticleSystem portalBParticles;
     [Range(0,10)]
     [SerializeField] int occurAfterVelocity;
     [Range(0.0f,0.2f)]
@@ -18,11 +16,6 @@ public class ParticleController : MonoBehaviour
     [SerializeField] private Rigidbody2D playerRB;
     float counter;
     private bool isOnGround;
-    private void Start() {
-        portalAParticles.Play();
-        portalBParticles.Play();
-    }
-
     public void PlayTouchParticles()
     {
         TouchParticles.Play();

@@ -6,16 +6,17 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] audioClips;
     [SerializeField] private AudioSource sfxSource;
     [SerializeField] private AudioSource musicSource;
-    AudioManager instance;
+    static AudioManager instance;
     private void Awake() {
-        if(instance == null)
+        if(instance != null && instance != this)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(gameObject);
+            return;
         }
         else
         {
-            Destroy(gameObject);
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 

@@ -12,7 +12,18 @@ public class LevelWin : MonoBehaviour
         if (SceneManagement.Instance != null)
             SceneManagement.Instance.NextLevel();
         else
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        {
+            int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+            bool hasNextScene = nextScene < SceneManager.sceneCountInBuildSettings;
+            if (hasNextScene)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            else
+            {
+                SceneManager.LoadSceneAsync(0);
+            }
+        }
     }
 
     void UnlockNewLevel()
