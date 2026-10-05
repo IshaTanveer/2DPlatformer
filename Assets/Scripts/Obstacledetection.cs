@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -62,6 +63,10 @@ public class Obstacledetection : MonoBehaviour
             audioManager.PlaySounds(AudioManager.Sound.death);
             Die();
         }
+    }
+    public int GetNumberOfLives()
+    {
+        return count;
     }
 
     private void Die()

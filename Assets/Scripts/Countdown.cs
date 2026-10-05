@@ -3,6 +3,7 @@ using TMPro;
 using System;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Countdown : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Countdown : MonoBehaviour
     [SerializeField] private float countdownTime = 3f;
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private float wait = 1.0f;
+    [SerializeField] Button pauseButton;
     
     [SerializeField] private TextMeshProUGUI levelNumber;
     void Awake()
@@ -36,6 +38,7 @@ public class Countdown : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0f;
+        pauseButton.interactable=false;
         StartCoroutine(ShowGameOverPanel());
     }
 
